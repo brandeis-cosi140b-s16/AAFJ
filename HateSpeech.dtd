@@ -8,5 +8,5 @@
 -->
 
 <!-- the umbrella tag for all things that are not hate speech -->
-<!ELEMENT NonHateSpeech #PCDATA>
+<!ELEMENT NonHateSpeech (#PCDATA)>
 
