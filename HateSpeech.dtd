@@ -43,6 +43,6 @@
 <!ELEMENT AgeHS (#PCDATA)>
 <!ATTLIST AgeHS slur (yes | no) #IMPLIED>
 
-<!-- socioeconomic-based hate speech -->
-<!ELEMENT SocioEcHS (#PCDATA)>
-<!ATTLIST SocioEc slur (yes | no) #IMPLIED>
+<!-- classist hate speech -->
+<!ELEMENT ClassHS (#PCDATA)>
+<!ATTLIST ClassHS slur (yes | no) #IMPLIED>
