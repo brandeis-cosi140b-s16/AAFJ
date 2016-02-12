@@ -11,38 +11,26 @@
 <!ELEMENT NonHateSpeech (#PCDATA)>
 <!ATTLIST NonHateSpeech slur (none | reclamation | sarcasm | outside_ref) #IMPLIED>
 
-<!-- racial hate speech -->
-<!ELEMENT RaceHS (#PCDATA)>
-<!ATTLIST RaceHS slur (yes | no) #IMPLIED>
+<!-- the umbrella tag for all things that are hate speech -->
+<!ELEMENT HateSpeech (#PCDATA)>
+<!ATTLIST HateSpeech race (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech religion (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech class (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech gender (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech orientation (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech nationality (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech disability (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech age (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech ideology (no | yes) #IMPLIED>
 
-<!-- gender-based hate speech -->
-<!ELEMENT GenderHS (#PCDATA)>
-<!ATTLIST GenderHS slur (yes | no) #IMPLIED>
+<!ELEMENT Target (#PCDATA)>
+<!ATTLIST Target group (Black people | White people | Muslims | Jews | Immigrants | Women | Feminists | ...)>
+<!ATTLIST Target slur (no | yes) #IMPLIED>
 
-<!-- sexual orientation hate speech -->
-<!ELEMENT OrientHS (#PCDATA)>
-<!ATTLIST OrientHS slur (yes | no) #IMPLIED>
+<!ELEMENT Stereotype (#PCDATA)>
+<!ATTLIST Stereotype type (physical | mental | behavioral)>
 
-<!-- gender identity hate speech -->
-<!ELEMENT GenderIDHS (#PCDATA)>
-<!ATTLIST GenderIDHS slur (yes | no) #IMPLIED>
-
-<!-- religious-based hate speech -->
-<!ELEMENT ReligiousHS (#PCDATA)>
-<!ATTLIST ReligiousHS slur (yes | no) #IMPLIED>
-
-<!-- nationality based hate speech / xenophobic speech -->
-<!ELEMENT NationHS (#PCDATA)>
-<!ATTLIST NationHS slur (yes | no) #IMPLIED>
-
-<!-- ableist hate speech -->
-<!ELEMENT AbleHS (#PCDATA)>
-<!ATTLIST AbleHS slur (yes | no) #IMPLIED>
-
-<!-- ageist hate speech -->
-<!ELEMENT AgeHS (#PCDATA)>
-<!ATTLIST AgeHS slur (yes | no) #IMPLIED>
-
-<!-- classist hate speech -->
-<!ELEMENT ClassHS (#PCDATA)>
-<!ATTLIST ClassHS slur (yes | no) #IMPLIED>
+<!ELEMENT Sentiment (#PCDATA)>
+<!ATTLIST Sentiment judgement (no | yes)>
+<!ATTLIST Sentiment incitement (no | yes)>
+<!ATTLIST Sentiment prediction (no | yes)>
