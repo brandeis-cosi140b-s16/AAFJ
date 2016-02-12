@@ -33,3 +33,7 @@
 <!-- nationality based hate speech / xenophobic speech -->
 <!ELEMENT NationHS (#PCDATA)>
 <!ATTLIST NationHS slur (yes | no) #IMPLIED>
+
+<!-- ableist = hate speech -->
+<!ELEMENT AbleHS (#PCDATA)>
+<!ATTLIST AbleHS slur (yes | no) #IMPLIED>
