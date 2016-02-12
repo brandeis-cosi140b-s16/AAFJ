@@ -9,6 +9,7 @@
 
 <!-- the umbrella tag for all things that are not hate speech -->
 <!ELEMENT NonHateSpeech (#PCDATA)>
+<!ATTLIST NonHateSpeech slur (none | reclamation | sarcasm | outside_ref) #IMPLIED>
 
 <!-- racial hate speech -->
 <!ELEMENT RaceHS (#PCDATA)>
