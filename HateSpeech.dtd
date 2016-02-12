@@ -17,6 +17,7 @@
 <!ATTLIST HateSpeech religion (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech class (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech gender (no | yes) #IMPLIED>
+<!ATTLIST HateSpeech genderID (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech orientation (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech nationality (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech disability (no | yes) #IMPLIED>
