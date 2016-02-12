@@ -10,20 +10,26 @@
 <!-- the umbrella tag for all things that are not hate speech -->
 <!ELEMENT NonHateSpeech (#PCDATA)>
 
+<!-- racial hate speech -->
 <!ELEMENT RaceHS (#PCDATA)>
 <!ATTLIST RaceHS slur (yes | no) #IMPLIED>
 
+<!-- gender-based hate speech -->
 <!ELEMENT GenderHS (#PCDATA)>
 <!ATTLIST GenderHS slur (yes | no) #IMPLIED>
 
+<!-- sexual orientation hate speech -->
 <!ELEMENT OrientHS (#PCDATA)>
 <!ATTLIST OrientHS slur (yes | no) #IMPLIED>
 
+<!-- gender identity hate speech -->
 <!ELEMENT GenderIDHS (#PCDATA)>
 <!ATTLIST GenderIDHS slur (yes | no) #IMPLIED>
 
+<!-- religious-based hate speech -->
 <!ELEMENT ReligiousHS (#PCDATA)>
 <!ATTLIST ReligiousHS slur (yes | no) #IMPLIED>
 
+<!-- nationality based hate speech / xenophobic speech -->
 <!ELEMENT NationHS (#PCDATA)>
 <!ATTLIST NationHS slur (yes | no) #IMPLIED>
