@@ -25,12 +25,19 @@
 <!ATTLIST HateSpeech ideology (no | yes) #IMPLIED>
 
 <!ELEMENT Target (#PCDATA)>
-<!ATTLIST Target group (Black people | White people | Muslims | Jews | Immigrants | Women | Feminists | ...)>
 <!ATTLIST Target slur (no | yes) #IMPLIED>
+<!ATTLIST Target race (Black | White | Asian | Latino)>
+<!ATTLIST Target religion (Muslims | Jews)>
+<!ATTLIST Target gender (Women | Nonbinary)>
+<!ATTLIST Target genderID (Trans)>
+<!ATTLIST Target orientation (Gay | Bi | Pan)>
+<!ATTLIST Target nationality (Migrants)>
+<!ATTLIST Target disability (mental | physical)>
+<!ATTLIST Target age (old | young)>
+<!ATTLIST Target ideology (Feminists | Communists | Socialists)>
 
 <!ELEMENT Stereotype (#PCDATA)>
 <!ATTLIST Stereotype type (physical | mental | behavioral)>
-
 <!ELEMENT Sentiment (#PCDATA)>
 <!ATTLIST Sentiment judgement (no | yes)>
 <!ATTLIST Sentiment incitement (no | yes)>
