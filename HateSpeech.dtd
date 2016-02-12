@@ -34,6 +34,10 @@
 <!ELEMENT NationHS (#PCDATA)>
 <!ATTLIST NationHS slur (yes | no) #IMPLIED>
 
-<!-- ableist = hate speech -->
+<!-- ableist hate speech -->
 <!ELEMENT AbleHS (#PCDATA)>
 <!ATTLIST AbleHS slur (yes | no) #IMPLIED>
+
+<!-- ageist hate speech -->
+<!ELEMENT AgeHS (#PCDATA)>
+<!ATTLIST AgeHS slur (yes | no) #IMPLIED>
