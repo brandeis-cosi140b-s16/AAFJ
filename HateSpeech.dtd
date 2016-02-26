@@ -7,12 +7,8 @@
 	~ Jose Molina (josemolina@brandeis.edu)
 -->
 
-<!-- the umbrella tag for all things that are not hate speech -->
-<!ELEMENT NonHateSpeech (#PCDATA)>
-<!ATTLIST NonHateSpeech slur (none | reclamation | sarcasm | outside_ref) #IMPLIED>
-
-<!-- the umbrella tag for all things that are hate speech -->
-<!ELEMENT HateSpeech (#PCDATA)>
+<!-- a nonconsuming tag marking an element as hate speech -->
+<!ELEMENT HateSpeech (#PCDATA) EMPTY>
 <!ATTLIST HateSpeech race (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech religion (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech class (no | yes) #IMPLIED>
@@ -22,19 +18,20 @@
 <!ATTLIST HateSpeech nationality (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech disability (no | yes) #IMPLIED>
 <!ATTLIST HateSpeech age (no | yes) #IMPLIED>
-<!ATTLIST HateSpeech ideology (no | yes) #IMPLIED>
 
-<!ELEMENT Target (#PCDATA)>
-<!ATTLIST Target slur (no | yes) #IMPLIED>
-<!ATTLIST Target race (Black | White | Asian | Latino)>
-<!ATTLIST Target religion (Muslims | Jews)>
-<!ATTLIST Target gender (Women | Nonbinary)>
-<!ATTLIST Target genderID (Trans)>
-<!ATTLIST Target orientation (Gay | Bi | Pan)>
-<!ATTLIST Target nationality (Migrants)>
-<!ATTLIST Target disability (mental | physical)>
-<!ATTLIST Target age (old | young)>
-<!ATTLIST Target ideology (Feminists | Communists | Socialists)>
+<!ELEMENT Group (#PCDATA)>
+<!ATTLIST Group target (no | yes) #IMPLIED>
+<!ATTLIST Group slur (no | yes | reclamation | sarcasm | outside_ref) #IMPLIED>
+<!ATTLIST Group race (Black | White | Asian | Latino | Native_American | other)>
+<!ATTLIST Group religion (Muslims | Jews | Protestants | Catholics | other)>
+<!ATTLIST Group class (rich | poor | other)>
+<!ATTLIST Group gender (Women | Men | Nonbinary | other)>
+<!ATTLIST Group genderID (Trans | other)>
+<!ATTLIST Group orientation (Gay | Bi | Pan | other)>
+<!ATTLIST Group nationality (Immigrants | Refugees | other)>
+<!ATTLIST Group disability (mental | physical | other)>
+<!ATTLIST Group age (old | young | other)>
+<!ATTLIST Group other CDATA>
 
 <!ELEMENT Stereotype (#PCDATA)>
 <!ATTLIST Stereotype type (physical | mental | behavioral)>
