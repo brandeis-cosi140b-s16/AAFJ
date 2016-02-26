@@ -21,7 +21,7 @@
 
 <!ELEMENT Group (#PCDATA)>
 <!ATTLIST Group target (no | yes) #IMPLIED>
-<!ATTLIST Group slur (no | yes | reclamation | sarcasm | outside_ref) #IMPLIED>
+<!ATTLIST Group slur (hateful | reclamation | sarcasm | outside_ref)>
 <!ATTLIST Group race (Black | White | Asian | Latino | Native_American | other)>
 <!ATTLIST Group religion (Muslims | Jews | Protestants | Catholics | other)>
 <!ATTLIST Group class (rich | poor | other)>
