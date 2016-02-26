@@ -7,7 +7,7 @@
 	~ Jose Molina (josemolina@brandeis.edu)
 -->
 
-<!-- a nonconsuming tag marking an element as hate speech -->
+<!-- a nonconsuming tag marking a tweet as hate speech -->
 <!ELEMENT HateSpeech (#PCDATA)>
 <!ATTLIST HateSpeech spans #IMPLIED>
 <!ATTLIST HateSpeech race (no | yes) #IMPLIED "no">
@@ -16,10 +16,12 @@
 <!ATTLIST HateSpeech gender (no | yes) #IMPLIED "no">
 <!ATTLIST HateSpeech genderID (no | yes) #IMPLIED "no">
 <!ATTLIST HateSpeech orientation (no | yes) #IMPLIED "no">
+<!ATTLIST HateSpeech immigrant_status (no | yes) #IMPLIED "no">
 <!ATTLIST HateSpeech nationality (no | yes) #IMPLIED "no">
 <!ATTLIST HateSpeech disability (no | yes) #IMPLIED "no">
 <!ATTLIST HateSpeech age (no | yes) #IMPLIED "no">
 
+<!-- consuming tag for a group of people mentioned, whether targeted or not -->
 <!ELEMENT Group (#PCDATA)>
 <!ATTLIST Group target (no | yes) #IMPLIED>
 <!ATTLIST Group slur (hateful | reclamation | sarcasm | outside_ref)>
@@ -35,9 +37,11 @@
 <!ATTLIST Group age (Old | Young | other)>
 <!ATTLIST Group other CDATA>
 
+<!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
 <!ELEMENT Stereotype (#PCDATA)>
 <!ATTLIST Stereotype type (physical | mental | behavioral | cultural) #REQUIRED>
 
+<!-- tag for a sentiment expressed toward a target group -->
 <!ELEMENT Sentiment (#PCDATA)>
 <!ATTLIST Sentiment judgement (no | yes)>
 <!ATTLIST Sentiment incitement (no | yes)>
