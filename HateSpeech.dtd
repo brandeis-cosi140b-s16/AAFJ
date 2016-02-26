@@ -38,7 +38,8 @@
 
 <!ELEMENT Stereotype (#PCDATA)>
 <!ATTLIST Stereotype type (physical | mental | behavioral)>
+
 <!ELEMENT Sentiment (#PCDATA)>
 <!ATTLIST Sentiment judgement (no | yes)>
 <!ATTLIST Sentiment incitement (no | yes)>
-<!ATTLIST Sentiment prediction (no | yes)>
+<!ATTLIST Sentiment warning (no | yes)>
