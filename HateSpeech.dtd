@@ -23,6 +23,7 @@
 
 <!-- consuming tag for a group of people mentioned, whether targeted or not -->
 <!ELEMENT Group (#PCDATA)>
+<!ATTLIST Group spans #IMPLIED>
 <!ATTLIST Group target (no | yes) #IMPLIED>
 <!ATTLIST Group slur (hateful | reclamation | sarcasm | outside_ref)>
 <!ATTLIST Group race (Black | White | Asian | Latino | Native_American | other)>
