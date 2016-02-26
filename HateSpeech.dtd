@@ -47,3 +47,34 @@
 <!ATTLIST Sentiment judgement (no | yes)>
 <!ATTLIST Sentiment incitement (no | yes)>
 <!ATTLIST Sentiment warning (no | yes)>
+
+
+<!-- alternative system ->
+
+<!ELEMENT Slur (PCDATA)>
+<!ATTLIST Slur type (hateful | reclamation | sarcasm | outside_ref)>
+
+<!ELEMENT Race (PCDATA)>
+<!ATTLIST Race spans #IMPLIED>
+<!ATTLIST Race target (Black | White | Asian | Latino | Native_American | other) #REQUIRED>
+<!ATTLIST Race other CDATA>
+
+<!ELEMENT Religion (PCDATA)>
+<!ATTLIST Religion spans #IMPLIED>
+<!ATTLIST Religion target (Muslims | Jews | Protestants | Catholics | other) #REQUIRED>
+<!ATTLIST Religion other CDATA>
+
+<!ELEMENT Class (PCDATA)>
+<!ATTLIST Class spans #IMPLIED>
+<!ATTLIST Class target (Rich | Poor | other) #REQUIRED>
+<!ATTLIST Class other CDATA>
+
+<!ELEMENT Gender (PCDATA)>
+<!ATTLIST Gender spans #IMPLIED>
+<!ATTLIST Gender target (Women | Men | Nonbinary | other) #REQUIRED>
+<!ATTLIST Gender other CDATA>
+
+<!ELEMENT GenderID (PCDATA)>
+<!ATTLIST GenderID spans #IMPLIED>
+<!ATTLIST GenderID target (Trans | other) #REQUIRED>
+<!ATTLIST GenderID other CDATA>
