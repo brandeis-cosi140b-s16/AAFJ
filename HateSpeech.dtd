@@ -34,7 +34,7 @@
 <!ATTLIST Group other CDATA>
 
 <!ELEMENT Stereotype (#PCDATA)>
-<!ATTLIST Stereotype type (physical | mental | behavioral)>
+<!ATTLIST Stereotype type (physical | mental | behavioral) #REQUIRED>
 
 <!ELEMENT Sentiment (#PCDATA)>
 <!ATTLIST Sentiment judgement (no | yes)>
