@@ -140,6 +140,7 @@
 <!ELEMENT Group (#PCDATA)>
 <!ATTLIST Group spans #IMPLIED>
 <!ATTLIST Group target (no | yes) #IMPLIED "no">
+<!-- must specify an id so that stereotypes, sentiments and future references to this group can link back -->
 <!ATTLIST Group id ID #REQUIRED>
 <!ATTLIST Group ref IDREF>
 <!ATTLIST Group slur (hateful | reclamation | sarcasm | outside_ref)>
@@ -158,9 +159,11 @@
 <!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
 <!ELEMENT Stereotype (#PCDATA)>
 <!ATTLIST Stereotype type (physical | mental | behavioral | cultural) #REQUIRED>
+<!-- must refer back to a group anchor -->
 <!ATTLIST Stereotype ref IDREF #REQUIRED>
 
 <!-- tag for a sentiment expressed toward a target group -->
 <!ELEMENT Sentiment (#PCDATA)>
 <!ATTLIST Sentiment type (judgement | incitement | warning | other) #REQUIRED>
+<!-- must refer back to a group anchor -->
 <!ATTLIST Stereotype ref IDREF #REQUIRED>
