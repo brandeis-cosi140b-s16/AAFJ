@@ -49,7 +49,7 @@
 <!ATTLIST Sentiment warning (no | yes)>
 
 
-<!-- alternative system ->
+<!-- alternative system -->
 
 <!ELEMENT Slur (PCDATA)>
 <!ATTLIST Slur type (hateful | reclamation | sarcasm | outside_ref) #REQUIRED>
@@ -129,3 +129,38 @@
 <!ATTLIST Other target CDATA>
 <!ATTLIST Other stereotype (physical | mental | behavioral | cultural) #IMPLIED>
 <!ATTLIST Other sentiment (judgement | incitement | warning) #IMPLIED>
+
+<!-- Alternative 2-->
+
+<!-- a nonconsuming tag marking a tweet as hate speech -->
+<!ELEMENT HateSpeech (#PCDATA)>
+<!ATTLIST HateSpeech spans #IMPLIED>
+
+<!-- consuming tag for a group of people mentioned, whether targeted or not -->
+<!ELEMENT Group (#PCDATA)>
+<!ATTLIST Group spans #IMPLIED>
+<!ATTLIST Group target (no | yes) #IMPLIED "no">
+<!ATTLIST Group id ID #REQUIRED>
+<!ATTLIST Group ref IDREF>
+<!ATTLIST Group slur (hateful | reclamation | sarcasm | outside_ref)>
+<!ATTLIST Group race (Black | White | Asian | Latino | Native_American | other)>
+<!ATTLIST Group religion (Muslims | Jews | Protestants | Catholics | other)>
+<!ATTLIST Group class (Rich | Poor | other)>
+<!ATTLIST Group gender (Women | Men | Nonbinary | other)>
+<!ATTLIST Group genderID (Trans | other)>
+<!ATTLIST Group orientation (Straight | Gay | Lesbian | Bi | Pan | other)>
+<!ATTLIST Group immigrant_status (Immigrants | Refugees | other)>
+<!ATTLIST Group nationality CDATA>
+<!ATTLIST Group disability (Mental | Physical | other)>
+<!ATTLIST Group age (Old | Young | other)>
+<!ATTLIST Group other CDATA>
+
+<!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
+<!ELEMENT Stereotype (#PCDATA)>
+<!ATTLIST Stereotype type (physical | mental | behavioral | cultural) #REQUIRED>
+<!ATTLIST Stereotype ref IDREF #REQUIRED>
+
+<!-- tag for a sentiment expressed toward a target group -->
+<!ELEMENT Sentiment (#PCDATA)>
+<!ATTLIST Sentiment type (judgement | incitement | warning | other) #REQUIRED>
+<!ATTLIST Stereotype ref IDREF #REQUIRED>
