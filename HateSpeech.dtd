@@ -139,7 +139,7 @@
 <!-- consuming tag for a group of people mentioned, whether targeted or not -->
 <!ELEMENT Group (#PCDATA)>
 <!ATTLIST Group spans #IMPLIED>
-<!ATTLIST Group target (no | yes) #IMPLIED "no">
+<!ATTLIST Group hate (no | yes) #IMPLIED "no">
 <!-- must specify an id so that stereotypes, sentiments and future references to this group can link back -->
 <!ATTLIST Group id ID #REQUIRED>
 <!ATTLIST Group ref IDREF>
