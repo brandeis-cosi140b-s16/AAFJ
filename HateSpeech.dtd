@@ -52,7 +52,7 @@
 <!-- alternative system ->
 
 <!ELEMENT Slur (PCDATA)>
-<!ATTLIST Slur type (hateful | reclamation | sarcasm | outside_ref)>
+<!ATTLIST Slur type (hateful | reclamation | sarcasm | outside_ref) #REQUIRED>
 
 <!ELEMENT Race (PCDATA)>
 <!ATTLIST Race spans #IMPLIED>
