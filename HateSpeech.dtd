@@ -10,160 +10,35 @@
 <!-- a nonconsuming tag marking a tweet as hate speech -->
 <!ELEMENT HateSpeech (#PCDATA)>
 <!ATTLIST HateSpeech spans #IMPLIED>
-<!ATTLIST HateSpeech race (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech religion (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech class (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech gender (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech genderID (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech orientation (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech immigrant_status (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech nationality (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech disability (no | yes) #IMPLIED "no">
-<!ATTLIST HateSpeech age (no | yes) #IMPLIED "no">
 
 <!-- consuming tag for a group of people mentioned, whether targeted or not -->
 <!ELEMENT Group (#PCDATA)>
 <!ATTLIST Group spans #IMPLIED>
-<!ATTLIST Group target (no | yes) #IMPLIED>
-<!ATTLIST Group slur (none | hateful | reclamation | sarcasm | outside_ref) #REQUIRED>
-<!ATTLIST Group race (Black | White | Asian | Latino | Native_American | other)>
-<!ATTLIST Group religion (Muslims | Jews | Protestants | Catholics | other)>
-<!ATTLIST Group class (Rich | Poor | other)>
-<!ATTLIST Group gender (Women | Men | Nonbinary | other)>
-<!ATTLIST Group genderID (Trans | other)>
-<!ATTLIST Group orientation (Gay | Bi | Pan | other)>
-<!ATTLIST Group immigrant_status (Immigrants | Refugees | other)>
-<!ATTLIST Group nationality CDATA>
-<!ATTLIST Group disability (Mental | Physical | other)>
-<!ATTLIST Group age (Old | Young | other)>
-<!ATTLIST Group other CDATA>
-
-<!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
-<!ELEMENT Stereotype (#PCDATA)>
-<!ATTLIST Stereotype type (physical | mental | behavioral | cultural) #REQUIRED>
-
-<!-- tag for a sentiment expressed toward a target group -->
-<!ELEMENT Sentiment (#PCDATA)>
-<!ATTLIST Sentiment judgement (no | yes)>
-<!ATTLIST Sentiment incitement (no | yes)>
-<!ATTLIST Sentiment warning (no | yes)>
-
-
-<!-- alternative system -->
-
-<!ELEMENT Slur (PCDATA)>
-<!ATTLIST Slur type (hateful | reclamation | sarcasm | outside_ref) #REQUIRED>
-
-<!ELEMENT Race (PCDATA)>
-<!ATTLIST Race spans #IMPLIED>
-<!ATTLIST Race target (Black | White | Asian | Latino | Native_American | other) #REQUIRED>
-<!ATTLIST Race other CDATA>
-<!ATTLIST Race stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Race sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT Religion (PCDATA)>
-<!ATTLIST Religion spans #IMPLIED>
-<!ATTLIST Religion target (Muslims | Jews | Protestants | Catholics | other) #REQUIRED>
-<!ATTLIST Religion other CDATA>
-<!ATTLIST Religion stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Religion sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT Gender (PCDATA)>
-<!ATTLIST Gender spans #IMPLIED>
-<!ATTLIST Gender target (Women | Men | Nonbinary | other) #REQUIRED>
-<!ATTLIST Gender other CDATA>
-<!ATTLIST Gender stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Gender sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT GenderID (PCDATA)>
-<!ATTLIST GenderID spans #IMPLIED>
-<!ATTLIST GenderID target (Trans | other) #REQUIRED>
-<!ATTLIST GenderID other CDATA>
-<!ATTLIST GenderID stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST GenderID sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT Orientation (PCDATA)>
-<!ATTLIST Orientation spans #IMPLIED>
-<!ATTLIST Orientation target (Gay | Bi | Pan | other) #REQUIRED>
-<!ATTLIST Orientation other CDATA>
-<!ATTLIST Orientation stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Orientation sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT ImmigrationStatus (PCDATA)>
-<!ATTLIST ImmigrationStatus spans #IMPLIED>
-<!ATTLIST ImigrationsStatus target (Immigrant | Refugee | other) #REQUIRED>
-<!ATTLIST ImmigrationStatus other CDATA>
-<!ATTLIST ImmigrationStatus stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST ImmigrationStatus sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT Nationality (PCDATA)>
-<!ATTLIST Nationality spans #IMPLIED>
-<!ATTLIST Nationality target CDATA #REQUIRED>
-<!ATTLIST Nationality stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Nationality sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT Class (PCDATA)>
-<!ATTLIST Class spans #IMPLIED>
-<!ATTLIST Class target (Rich | Poor | other) #REQUIRED>
-<!ATTLIST Class other CDATA>
-<!ATTLIST Class stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Class sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT Disability (PCDATA)>
-<!ATTLIST Disability spans #IMPLIED>
-<!ATTLIST Disability target (Mental | Physical | other) #REQUIRED>
-<!ATTLIST Disability other CDATA>
-<!ATTLIST Disability stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Disabilit sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT Age (PCDATA)>
-<!ATTLIST Age spans #IMPLIED>
-<!ATTLIST Age target (Old | Young | other) #REQUIRED>
-<!ATTLIST Age other CDATA>
-<!ATTLIST Age stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Age sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!ELEMENT Other (PCDATA)>
-<!ATTLIST Other spans #IMPLIED>
-<!ATTLIST Other type CDATA>
-<!ATTLIST Other target CDATA>
-<!ATTLIST Other stereotype (physical | mental | behavioral | cultural) #IMPLIED>
-<!ATTLIST Other sentiment (judgement | incitement | warning) #IMPLIED>
-
-<!-- Alternative 2-->
-
-<!-- a nonconsuming tag marking a tweet as hate speech -->
-<!ELEMENT HateSpeech (#PCDATA)>
-<!ATTLIST HateSpeech spans #IMPLIED>
-
-<!-- consuming tag for a group of people mentioned, whether targeted or not -->
-<!ELEMENT Group (#PCDATA)>
-<!ATTLIST Group spans #IMPLIED>
-<!ATTLIST Group hate (no | yes) #IMPLIED "no">
-<!-- must specify an id so that stereotypes, sentiments and future references to this group can link back -->
+<!ATTLIST Group hate (no | yes) #REQUIRED>
 <!ATTLIST Group id ID #REQUIRED>
 <!ATTLIST Group ref IDREF>
-<!ATTLIST Group slur (hateful | reclamation | sarcasm | outside_ref)>
-<!ATTLIST Group race (Black | White | Asian | Latino | Native_American | other)>
-<!ATTLIST Group religion (Muslims | Jews | Protestants | Catholics | other)>
-<!ATTLIST Group class (Rich | Poor | other)>
-<!ATTLIST Group gender (Women | Men | Nonbinary | other)>
-<!ATTLIST Group genderID (Trans | other)>
+<!ATTLIST Group slur (none | hateful | reclamation | sarcasm | outside_ref) #REQUIRED>
+<!ATTLIST Group race (Black | White | Asian | Latino | Native_American | Middle_Eastern | other)>
+<!ATTLIST Group religion (Muslim | Jewish | Protestant | Catholic | Christian | other)>
+<!ATTLIST Group class (Rich | Middle | Poor | other)>
+<!ATTLIST Group gender (Female | Male | Nonbinary | other)>
+<!ATTLIST Group genderID (Trans | Cis | other)>
 <!ATTLIST Group orientation (Straight | Gay | Lesbian | Bi | Pan | other)>
-<!ATTLIST Group immigrant_status (Immigrants | Refugees | other)>
+<!ATTLIST Group immigrant_status (Immigrant | Refugee | other)>
 <!ATTLIST Group nationality CDATA>
 <!ATTLIST Group disability (Mental | Physical | other)>
 <!ATTLIST Group age (Old | Young | other)>
 <!ATTLIST Group other CDATA>
-
-<!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
-<!ELEMENT Stereotype (#PCDATA)>
-<!ATTLIST Stereotype type (physical | mental | behavioral | cultural) #REQUIRED>
-<!-- must refer back to a group anchor -->
-<!ATTLIST Stereotype ref IDREF #REQUIRED>
 
 <!-- tag for a sentiment expressed toward a target group -->
 <!ELEMENT Sentiment (#PCDATA)>
 <!ATTLIST Sentiment type (judgement | incitement | warning | other) #REQUIRED>
 <!-- must refer back to a group anchor -->
 <!ATTLIST Stereotype ref IDREF #REQUIRED>
+
+<!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
+<!ELEMENT Stereotype (#PCDATA)>
+<!ATTLIST Stereotype type (physical | mental | behavioral | cultural) #REQUIRED>
+<!-- must refer back to a group anchor -->
+<!ATTLIST Stereotype ref IDREF #REQUIRED>
+
