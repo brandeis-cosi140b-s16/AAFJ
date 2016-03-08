@@ -1,4 +1,4 @@
-<!ENTITY name "HateSpeech_1.0">
+<!ENTITY name "HateSpeech_2.0">
 
 <!--
   ~ Anna Astori
@@ -30,15 +30,15 @@
 <!ATTLIST Sentiment spans #IMPLIED>
 <!ATTLIST Sentiment type (judgement | incitement | warning | other) #REQUIRED>
 <!ATTLIST Sentiment other CDATA>
-<!ATTLIST Group id ID #REQUIRED>
+<!ATTLIST Sentiment id ID #REQUIRED>
 
 <!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
 <!ELEMENT Stereotype (#PCDATA)>
 <!ATTLIST Stereotype spans #IMPLIED>
 <!ATTLIST Stereotype type (physical | mental | behavioral | cultural) 
 #REQUIRED>
-<!ATTLIST Group id ID #REQUIRED>
+<!ATTLIST Stereotype id ID #REQUIRED>
 
 <!ELEMENT Ref EMPTY>
-<!ATTLIST Ref IDREF #REQUIRED>
-<!ATTLIST Ref IDREF #REQUIRED>
+<!ATTLIST Ref IDREF prefix="statement" #REQUIRED>
+<!ATTLIST Ref IDREF prefix="target" #REQUIRED>
