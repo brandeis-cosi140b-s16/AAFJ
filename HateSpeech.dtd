@@ -30,6 +30,7 @@
 <!ATTLIST Sentiment spans #IMPLIED>
 <!ATTLIST Sentiment type (judgement | incitement | warning | other) #REQUIRED>
 <!ATTLIST Sentiment other CDATA>
+<!ATTLIST Sentiment nonhate (sarcasm | outside_ref | other)>
 <!ATTLIST Sentiment id ID #REQUIRED>
 
 <!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
@@ -37,6 +38,7 @@
 <!ATTLIST Stereotype spans #IMPLIED>
 <!ATTLIST Stereotype type (physical | mental | behavioral | cultural) 
 #REQUIRED>
+<!ATTLIST Stereotype nonhate (sarcasm | outside_ref | other)>
 <!ATTLIST Stereotype id ID #REQUIRED>
 
 <!ELEMENT Ref EMPTY>
