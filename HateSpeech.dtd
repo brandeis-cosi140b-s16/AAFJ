@@ -30,14 +30,14 @@
 <!ATTLIST Group other CDATA>
 
 <!-- tag for a sentiment expressed toward a target group -->
-<!ELEMENT Sentiment (#PCDATA)>
+<!ELEMENT Sentiment EMPTY>
 <!ATTLIST Sentiment type (judgement | incitement | warning | other) #REQUIRED>
-<!-- must refer back to a group anchor -->
-<!ATTLIST Stereotype ref IDREF #REQUIRED>
+<!ATTLIST Sentiment other CDATA>
+<!ATTLIST Sentiment arg0 IDREF prefix="statement" #REQUIRED>
+<!ATTLIST Sentiment arg1 IDREF prefix="target" #REQUIRED>
 
 <!-- tag for a phrase or statement ascribing stereotypical qualities to a target group -->
-<!ELEMENT Stereotype (#PCDATA)>
+<!ELEMENT Stereotype EMPTY>
 <!ATTLIST Stereotype type (physical | mental | behavioral | cultural) #REQUIRED>
-<!-- must refer back to a group anchor -->
-<!ATTLIST Stereotype ref IDREF #REQUIRED>
-
+<!ATTLIST Sentiment arg0 IDREF prefix="statement" #REQUIRED>
+<!ATTLIST Sentiment arg1 IDREF prefix="target" #REQUIRED>
