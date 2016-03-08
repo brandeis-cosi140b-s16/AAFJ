@@ -16,7 +16,6 @@
 <!ATTLIST Group spans #IMPLIED>
 <!ATTLIST Group hate (no | yes) #REQUIRED>
 <!ATTLIST Group id ID #REQUIRED>
-<!ATTLIST Group ref IDREF>
 <!ATTLIST Group slur (none | hateful | reclamation | sarcasm | outside_ref) #REQUIRED>
 <!ATTLIST Group race (Black | White | Asian | Latino | Native_American | Middle_Eastern | other)>
 <!ATTLIST Group religion (Muslim | Jewish | Protestant | Catholic | Christian | other)>
