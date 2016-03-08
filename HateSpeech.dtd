@@ -28,7 +28,7 @@
 <!-- tag for a sentiment expressed toward a target group -->
 <!ELEMENT Sentiment (#PCDATA)>
 <!ATTLIST Sentiment spans #IMPLIED>
-<!ATTLIST Sentiment type (judgement | incitement | warning | other) #REQUIRED>
+<!ATTLIST Sentiment type (judgement | incitement | warning | reaction | other) #REQUIRED>
 <!ATTLIST Sentiment other CDATA>
 <!ATTLIST Sentiment nonhate (sarcasm | outside_ref | other)>
 <!ATTLIST Sentiment id ID #REQUIRED>
