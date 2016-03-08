@@ -42,5 +42,3 @@
 <!ATTLIST Stereotype id ID #REQUIRED>
 
 <!ELEMENT Ref EMPTY>
-<!ATTLIST Ref IDREF prefix="statement" #REQUIRED>
-<!ATTLIST Ref IDREF prefix="target" #REQUIRED>
