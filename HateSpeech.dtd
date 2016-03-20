@@ -11,6 +11,7 @@
 <!ELEMENT Group (#PCDATA)>
 <!ATTLIST Group spans #IMPLIED>
 <!ATTLIST Group hate (no | yes) #REQUIRED>
+<!ATTLIST Group reverse (no | yes)>
 <!ATTLIST Group id ID #REQUIRED>
 <!ATTLIST Group slur (none | hateful | reclamation | sarcasm | outside_ref) #REQUIRED>
 <!ATTLIST Group race (Black | White | Asian | Latino | Native_American | Middle_Eastern | other)>
