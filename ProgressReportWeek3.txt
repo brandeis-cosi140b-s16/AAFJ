@@ -1,5 +1,6 @@
 2016/04/01 Week 3 Update
 
 - Each of us completed annotating 100 tweets for MojiSem.
+- The DTD was updated to include a body_image tag for hate speech against fat people.
 - Guidelines were updated with minor tweaks and more specific examples.
 - We also received more annotations from MojiSem, and began adjudication.
