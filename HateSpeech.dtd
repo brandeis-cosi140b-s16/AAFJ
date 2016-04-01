@@ -24,7 +24,7 @@
 <!ATTLIST Group nationality CDATA>
 <!ATTLIST Group disability (Mental | Physical | other)>
 <!ATTLIST Group age (Old | Young | other)>
-<!ATTLIST Group body_image (Fat | other)>
+<!ATTLIST Group body_image (Fat | Thin | other)>
 <!ATTLIST Group other CDATA>
 
 <!-- tag for a sentiment expressed toward a target group -->
