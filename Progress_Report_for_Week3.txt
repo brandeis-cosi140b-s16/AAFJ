@@ -1,0 +1,4 @@
+2016/04/01 Week 3 Update
+
+- Each of us completed annotating 100 tweets for MojiSem.
+- Guidelines were updated with minor tweaks and more specific examples.
