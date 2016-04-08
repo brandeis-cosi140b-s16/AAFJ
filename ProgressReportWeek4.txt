@@ -1,0 +1,5 @@
+2016/04/08 Week 4 Update
+
+- Each of us completed annotating 100 tweets for MojiSem.
+- DTD and Guidelines are stable.
+- We also received more annotations from MojiSem and attempted adjudication.
